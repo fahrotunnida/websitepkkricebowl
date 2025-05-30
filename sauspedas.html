@@ -1,259 +1,88 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Rice Bowl Chicken Katsu</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #8B5E3C;
-      color: #000;
-      text-align: center;
-      margin: 0;
-      padding-bottom: 100px;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saus Pedas</title>
+    <style>
+      
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fff4d1;
+        }
 
-    .container {
-      padding: 20px;
-    }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+        }
 
-    .header, .footer {
-      background-color: #F4E3B5;
-      padding: 15px;
-      font-size: 24px;
-      font-weight: bold;
-    }
+        .title {
+            background-color: #e53935;
+            color: white;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
 
-    .menu-card {
-      background-color: #F4A600;
-      border-radius: 10px;
-      padding: 20px;
-      margin: 20px auto;
-      max-width: 400px;
-      width: 90%;
-      text-align: left;
-      color: #000;
-    }
+        .title h1 {
+            margin: 0;
+            font-size: 24px;
+        }
 
-    .menu-card img {
-      width: 100%;
-      border-radius: 10px;
-    }
+        .image-box {
+            margin: 20px auto;
+            padding: 10px;
+            background-color: #ffe0b2;
+            border-radius: 10px;
+            width: 100%;
+            max-width: 300px;
+        }
 
-    .menu-card h3 {
-      margin-top: 10px;
-      font-size: 22px;
-    }
+        .image-box img {
+            width: 100%;
+            border-radius: 10px;
+        }
 
-    .menu-card p {
-      font-size: 16px;
-      margin: 10px 0;
-    }
+        .description {
+            font-size: 16px;
+            color: #333;
+            background-color: #ffcc80;
+            padding: 15px;
+            border-radius: 10px;
+            line-height: 1.6;
+        }
 
-    .menu-actions {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 10px;
-      margin-top: 10px;
-    }
+        .description p {
+            margin: 0;
+        }
 
-    .menu-actions button {
-      background-color: #F4E3B5;
-      border-radius: 5px;
-      padding: 10px 15px;
-      font-weight: bold;
-      border: none;
-      cursor: pointer;
-      color: #000;
-    }
+   
+        @media (max-width: 768px) {
+            .title h1 {
+                font-size: 20px;
+            }
 
-    .sausbox {
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-      margin-top: 20px;
-      flex-wrap: wrap;
-    }
-
-    .saus {
-      text-align: center;
-      background-color: #F4A600;
-      border-radius: 10px;
-      padding: 10px;
-      width: 180px;
-    }
-
-    .saus a {
-      display: inline-block;
-      margin-top: 10px;
-      background-color: #F4E3B5;
-      border-radius: 5px;
-      padding: 8px 12px;
-      font-weight: bold;
-      text-decoration: none;
-      color: #000;
-    }
-
-
-
-    .checkout-bar {
-      position: fixed;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      background: #F4E3B5;
-      padding: 10px 20px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      border-top: 2px solid #000;
-    }
-
-    .checkout-bar button {
-      background-color: #F4A600;
-      padding: 10px 20px;
-      border: none;
-      border-radius: 5px;
-      font-weight: bold;
-      color: #000;
-      cursor: pointer;
-    }
-    
-    .social-icon {
-    margin-top: 10px;
-    text-align: center;
-}
-
-.teks {
-    
-    text-decoration: none;
-    color: beige;
-    font-size : 20px;
-    margin: center;
-}
-
-  </style>
+            .description {
+                font-size: 14px;
+            }
+        }
+    </style>
 </head>
 <body>
-
-<link rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
-    />
-  <div class="header">~ SELAMAT DATANG ~</div>
-
-  <div class="container">
-    <!-- MENU -->
-    <div class="menu-card">
-      <h3>RICE BOWL CHICKEN KATSU</h3>
-      <img src="https://i.pinimg.com/736x/cf/73/b5/cf73b5baa79236bc732b7f9e187faa05.jpg" alt="Chicken Katsu">
-      <p>Cari makanan yang bisa dimakan saat jam rawan lapar kapanpun? Pilih rice bowl chicken katsu solusinya! ⭐⭐⭐⭐</p>
-      <p>Rasanya yang bukan main, pasti gacor bikin lidah bergoyang.</p>
-      <div class="menu-actions">
-        <button onclick="kurangiPesanan('Rice Bowl Chicken Katsu', 12000)">-</button>
-        <span id="jumlah-Rice Bowl Chicken Katsu">0</span>
-        <button onclick="tambahPesanan('Rice Bowl Chicken Katsu', 12000)">+</button>
-      </div>
-    </div>
-
-    <!-- SAUS -->
-    <div class="sausbox">
-      <div class="saus">
-        <p><strong class="warna" style="color: red">Saus Pedas</strong></p>
-        <a href="sauspedas.html" target="_blank">Lihat</a>
-      </div>
-      <div class="saus">
-        <p><strong class="warna" style="color: white"> Mentai</strong></p>
-        <a href="sausmentai.html" target="_blank">Lihat</a>
-      </div>
-    </div>
-  </div>
-
-  <div class="footer">NIKMATI LEZATNYA</div>
-
-  <!-- ALAMAT DAN SOSMED-->
-  <p class="teks"><strong> Alamat dan Sosial Media Kami </strong></p>
-  
- <div class="social-icon">
-                <a href="https://www.instagram.com/riitsu.26?igsh=MXQ2YzIyOTB2OTA0ZQ==" target="_blank" rel="noopener" style="text-decoration: none; margin-right: 8px;">
-                <i class="bi bi-instagram" style="color: white; font-size: 24px"></i>
-            </a>
-
-                <a href="https://www.facebook.com/profile.php?id=100064115794205" target="_blank" class="social-link" style="text-decoration: none; margin-right: 8px;">
-                <i class="bi bi-facebook pink-icon" style="color: white; font-size: 24px;"></i>
-            </a>
-                <a href="https://www.tiktok.com/@riitsu00?_t=ZS-8wjAfyt7hE0&_r=1" target="_blank" style="text-decoration: none; margin-right: 8px;">
-                <i class="fab fa-tiktok" style="color: white; font-size: 24px;"></i>
-            </a>
-            <a href="https://youtube.com/@riitsu.26?si=J7RPAD_Y_wmaaJQu" target="_blank" style="text-decoration: none; margin-right: 8px;">
-            <i class="bi bi-youtube" style="color: white; font-size: 24px;"></i>
-            </a>
-                
-            <a href="https://shopee.co.id/ritshu26" target="_blank" style="text-decoration: none; margin-right: 6px;">
-            <i class="bi bi-bag-heart-fill" style="color: white; font-size: 24px;"></i>
-            </a>
-        
-            <a href="https://maps.app.goo.gl/2mkLG4FZx3mrNn8W6" target="_blank" style="text-decoration: none; margin-right: 8px;">
-  <i class="bi bi-geo-alt-fill" style="color: white; font-size: 24px;"></i> 
-            </a>
+    <div class="container">
+        <div class="title">
+            <h1>Kenikmatan Saus Pedas</h1>
         </div>
+        <div class="image-box">
+            <img src="https://w7.pngwing.com/pngs/221/975/png-transparent-h-j-heinz-company-barbecue-sauce-baked-beans-ketchup-tomato-sauce-tomato-food-recipe-tomato-thumbnail.png" alt="Gambar Saus Pedas">
         </div>
-  <!-- CHECKOUT -->
-  <div class="checkout-bar">
-    <strong>Total: Rp <span id="total">0</span></strong>
-    <button onclick="checkout()">Checkout</button>
-  </div>
-
-  <script>
-    let totalHarga = 0;
-    let pesananList = {};
-
-    function updateDisplay(nama) {
-      document.getElementById("total").textContent = totalHarga.toLocaleString("id-ID");
-      document.getElementById("jumlah-" + nama).textContent = pesananList[nama] || 0;
-    }
-
-    function tambahPesanan(nama, harga) {
-      if (!pesananList[nama]) {
-        pesananList[nama] = 0;
-      }
-      pesananList[nama]++;
-      totalHarga += harga;
-      updateDisplay(nama);
-    }
-
-    function kurangiPesanan(nama, harga) {
-      if (pesananList[nama] && pesananList[nama] > 0) {
-        pesananList[nama]--;
-        totalHarga -= harga;
-        updateDisplay(nama);
-      }
-    }
-
-    function checkout() {
-      if (totalHarga === 0) {
-        alert("Silakan pilih dulu sebelum checkout!");
-        return;
-      }
-
-      let detailPesanan = "";
-      for (const nama in pesananList) {
-        if (pesananList[nama] > 0) {
-          const subtotal = pesananList[nama] * 12000;
-          detailPesanan += `${nama} x${pesananList[nama]} - Rp ${subtotal.toLocaleString("id-ID")}%0A`;
-        }
-      }
-
-      const pesan = `Halo, saya ingin memesan:%0A${detailPesanan}%0ATotal: Rp ${totalHarga.toLocaleString("id-ID")}`;
-      const nomorWA = "6289516512780";
-      const url = `https://wa.me/${nomorWA}?text=${pesan}`;
-      window.open(url, "_blank");
-    }
-  </script>
+        <div class="description">
+            <p>Saus pedas istimewa kami menciptakan rasa pedas yang menggugah selera. Cocok untuk melengkapi hidangan favorit Anda, yaitu ayam katsu Kombinasi pedas dan gurihnya menjadikan pengalaman makan Anda lebih spesial.</p>
+        </div>
+    </div>
 </body>
 </html>
